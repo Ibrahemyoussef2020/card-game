@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deck game</title>
+    <link rel="stylesheet" href='./styles.css'>
+
+    <script src="./js/utils.js" type="module"></script>
+    <script src="./js/deck.js" type="module"></script>
+    <script src="./js/options.js" type="module" ></script>
+    <script src="./js/game.js" type="module"></script>
+
+</head>
+<body>
+
+    <div class="start-wrapper hidden before-show-btn">
+        <button class="start" id="start">
+            <img src="./images/start-bg.jpg" alt="">
+            <span id="intro-text">Strat</span>
+        </button>
+    </div>
+
+    <header>
+        <div class="container scalable shrink">
+            <div class="left">
+                <button id="replay">Replay</button>
+                <button id="pause" >pause</button>
+                <button id="settings" >Settings</button>
+            </div>
+            <div class="right">
+                <div class="logo">
+                    <div class="first-letter letter">C</div>
+                    <div class=" letter">o</div>
+                    <div class=" letter">u</div>
+                    <div class=" letter">t</div>
+                    <div class="letter">c</div>
+                    <div class=" letter">h</div>
+                    <div class=" letter">i</div>
+                    <div class=" letter">n</div>
+                    <div class=" letter">a</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container scalable shrink">
+        <div class="game-stage">
+            <div class="layout-settings hidden">
+
+                <div class="players-settings">
+                    <button class="players-btn selected" data-Player="2">
+                        <img src="./images/user.png" alt="player 1">
+                        <span>vs</span>
+                        <img src="./images/user.png" alt="player 2">
+                    </button class="players-btn">
+                    <button class="players-btn" data-Player="1">
+                        <img src="./images/user.png" alt="player 1">
+                        <span>vs</span>
+                        <img src="./images/pc.png" alt="Computer">
+                    </button>
+                </div>
+
+                <div class="color-settings">
+                    <div class="PlayerTwo">
+                        <h3>PlayerTwo color</h3>
+                        <div class="colors-wrapper">
+                            <button class="color-btn" data-Player="PlayerTwo" data-color="bg-black">
+                                <img src="./images/black.webp" alt="" />
+                            </button>
+                            <button class="color-btn" data-Player="PlayerTwo" data-color="bg-blue">
+                                <img src="./images/blue.webp" alt="" />
+                            </button>
+                            <button class="color-btn" data-Player="PlayerTwo" data-color="bg-green">
+                                <img src="./images/green.webp" alt="" />
+                            </button>
+                            <button class="color-btn" data-Player="PlayerTwo" data-color="bg-browen">
+                                <img src="./images/browen.webp" alt="" />
+                            </button>
+                            <button class="color-btn" data-Player="PlayerTwo" data-color="bg-mauve">
+                                <img src="./images/mauve.webp" alt="" />
+                            </button>
+                            <button class="color-btn" data-Player="PlayerTwo" data-color="bg-red">
+                                <img src="./images/red.webp" alt="" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="PlayerOne">
+                        <h3>User color</h3>
+                        <div class="colors-wrapper">
+                            <button class="color-btn" data-Player="PlayerOne" data-color="bg-black">
+                                <img src="./images/black.webp" alt="" />
+                            </button>
+                            <button class="color-btn" data-Player="PlayerOne" data-color="bg-blue">
+                                <img src="./images/blue.webp" alt="" />
+                            </button>
+                            <button class="color-btn" data-Player="PlayerOne" data-color="bg-green">
+                                <img src="./images/green.webp" alt="" />
+                            </button>
+                            <button class="color-btn" data-Player="PlayerOne" data-color="bg-browen">
+                                <img src="./images/browen.webp" alt="" />
+                            </button>
+                            <button class="color-btn" data-Player="PlayerOne" data-color="bg-mauve">
+                                <img src="./images/mauve.webp" alt="" />
+                            </button>
+                            <button class="color-btn" data-Player="PlayerOne" data-color="bg-red">
+                                <img src="./images/red.webp" alt="" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="PlayerTwo-land land">
+                
+            </div>
+            
+            <div class="game-wrapper">
+                <div class="PlayerTwo-deck deck bg-blue" id="PlayerTwo-deck">
+                    <span>26</span>
+                    <div class="choose"></div>
+                </div>
+                <div class="PlayerTwo-card-chosen card-chosen">
+                   <!--- dynamic choosen card --->
+                </div>
+                <div class="result no-animation">Start</div>
+                <div class="PlayerOne-deck deck bg-black" id="PlayerOne-deck">
+                    <span>26</span>
+                    <div class="choose"></div>
+                </div>
+                <div class="PlayerOne-card-chosen card-chosen " id="PlayerOne-card-chosen">
+                    
+                </div>
+            </div>
+    
+            <div class="PlayerOne-land land">
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
